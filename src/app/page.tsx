@@ -72,6 +72,14 @@ const DOCTORS = [
   { name: 'Др. Медведева Ольга', specialty: 'Хирург, стоматолог', photo: '/photos/DSC_0225.jpg' },
 ]
 
+/* Doctors on shift today — in production this comes from МИС API */
+const DOCTORS_ON_SHIFT = [
+  { name: 'Др. Александров Игорь', specialty: 'Терапевт', photo: '/photos/DSC_0190.jpg', cabinet: 'Кабинет 1', shift: '09:00 – 21:00', status: 'accepting' as const },
+  { name: 'Др. Воронова Елена', specialty: 'УЗИ-диагностика', photo: '/photos/DSC_0210.jpg', cabinet: 'Кабинет УЗИ', shift: '10:00 – 22:00', status: 'accepting' as const },
+  { name: 'Анна Смирнова', specialty: 'Фельдшер', photo: '/photos/DSC_0220.jpg', cabinet: 'Процедурный', shift: '08:00 – 20:00', status: 'busy' as const },
+  { name: 'Др. Медведева Ольга', specialty: 'Хирург', photo: '/photos/DSC_0225.jpg', cabinet: 'Кабинет 3', shift: '12:00 – 00:00', status: 'accepting' as const },
+]
+
 const GALLERY_PHOTOS = [
   '/photos/DSC_0230.jpg', '/photos/DSC_0185.jpg', '/photos/DSC_0205.jpg', '/photos/DSC_0210.jpg',
   '/photos/DSC_0220.jpg', '/photos/DSC_0195.jpg', '/photos/DSC_0225.jpg', '/photos/DSC_0234.jpg',
@@ -223,6 +231,62 @@ export default function HomePage() {
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#4ade80]">{s.num}</div>
                 <div className="text-xs sm:text-sm text-white/70">{s.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ====== DOCTORS ON SHIFT TODAY ====== */}
+      <section className="py-12 lg:py-16 bg-gradient-to-r from-[#1e3a5f] to-[#2a5280]">
+        <div className="max-w-7xl mx-auto px-4">
+          <FadeIn>
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
+              <h2 className="text-2xl lg:text-3xl font-bold text-white">Сегодня на смене</h2>
+            </div>
+            <p className="text-center text-white/60 text-sm mb-8">
+              {new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {DOCTORS_ON_SHIFT.map((doc, i) => (
+              <FadeIn key={doc.name} delay={i * 100}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/15 transition-all group">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-white/20 flex-shrink-0">
+                      <Image src={doc.photo} alt={doc.name} fill className="object-cover" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-white font-semibold text-sm truncate">{doc.name}</h3>
+                      <p className="text-white/60 text-xs">{doc.specialty}</p>
+                    </div>
+                  </div>
+                  <div className="space-y-1.5 mb-3">
+                    <div className="flex items-center gap-2 text-xs text-white/50">
+                      <MapPin size={12} />
+                      <span>{doc.cabinet}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/50">
+                      <Clock size={12} />
+                      <span>{doc.shift}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <div className={`w-2 h-2 rounded-full ${doc.status === 'accepting' ? 'bg-emerald-400' : 'bg-amber-400'}`} />
+                      <span className={`text-xs font-medium ${doc.status === 'accepting' ? 'text-emerald-400' : 'text-amber-400'}`}>
+                        {doc.status === 'accepting' ? 'Принимает' : 'На приёме'}
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => scrollTo('appointment')}
+                      className="text-xs bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full transition-colors"
+                    >
+                      Записаться
+                    </button>
+                  </div>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>
