@@ -1048,8 +1048,9 @@ export default function HomePage() {
             <FadeIn delay={200}>
               <div className="rounded-2xl overflow-hidden shadow-lg h-[400px] lg:h-full min-h-[400px] border border-gray-100">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=37.527826%2C55.677476&z=16&pt=37.527826%2C55.677476%2Cpm2rdm&text=%D0%91%D0%B5%D1%80%D0%BB%D0%BE%D0%B3%D0%B0%20%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0"
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A1&source=constructorLink&ll=37.527826%2C55.677476&z=16&pt=37.527826%2C55.677476%2Cpm2rdm"
                   width="100%" height="100%" frameBorder="0" allowFullScreen title="Карта" className="w-full h-full"
+                  style={{ border: 0 }}
                 />
               </div>
             </FadeIn>
