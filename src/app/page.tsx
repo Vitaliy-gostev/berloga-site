@@ -101,17 +101,17 @@ const SERVICES = [
 ]
 
 const DOCTORS = [
-  { name: 'Медведева Александра Владимировна', specialty: 'Генеральный директор, УЗИ-диагностика', experience: '12 лет опыта', photo: '/stock/doctor1.jpg' },
-  { name: 'Шилина Мария Александровна', specialty: 'Главный врач, нефролог, уролог', experience: '10 лет опыта', photo: '/stock/doctor2.jpg' },
-  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург-стоматолог, абдоминальный хирург', experience: '9 лет опыта', photo: '/stock/doctor3.jpg' },
-  { name: 'Черныш Мария Сергеевна', specialty: 'Зав. терапевтическим отделением', experience: '8 лет опыта', photo: '/stock/doctor4.jpg' },
+  { name: 'Медведева Александра Владимировна', specialty: 'Генеральный директор, УЗИ-диагностика', experience: '12 лет опыта', initials: 'МА' },
+  { name: 'Шилина Мария Александровна', specialty: 'Главный врач, нефролог, уролог', experience: '10 лет опыта', initials: 'ШМ' },
+  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург-стоматолог, абдоминальный хирург', experience: '9 лет опыта', initials: 'МГ' },
+  { name: 'Черныш Мария Сергеевна', specialty: 'Зав. терапевтическим отделением', experience: '8 лет опыта', initials: 'ЧМ' },
 ]
 
 const DOCTORS_ON_SHIFT = [
-  { name: 'Шилина Мария Александровна', specialty: 'Нефролог, уролог', photo: '/stock/doctor2.jpg', cabinet: 'Кабинет 1', shift: '09:00 – 21:00', status: 'accepting' as const },
-  { name: 'Медведева Александра Владимировна', specialty: 'УЗИ-диагностика', photo: '/stock/doctor1.jpg', cabinet: 'Кабинет УЗИ', shift: '10:00 – 22:00', status: 'accepting' as const },
-  { name: 'Черныш Мария Сергеевна', specialty: 'Терапевт', photo: '/stock/doctor4.jpg', cabinet: 'Процедурный', shift: '08:00 – 20:00', status: 'busy' as const },
-  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург', photo: '/stock/doctor3.jpg', cabinet: 'Кабинет 3', shift: '12:00 – 00:00', status: 'accepting' as const },
+  { name: 'Шилина Мария Александровна', specialty: 'Нефролог, уролог', initials: 'ШМ', cabinet: 'Кабинет 1', shift: '09:00 – 21:00', status: 'accepting' as const },
+  { name: 'Медведева Александра Владимировна', specialty: 'УЗИ-диагностика', initials: 'МА', cabinet: 'Кабинет УЗИ', shift: '10:00 – 22:00', status: 'accepting' as const },
+  { name: 'Черныш Мария Сергеевна', specialty: 'Терапевт', initials: 'ЧМ', cabinet: 'Процедурный', shift: '08:00 – 20:00', status: 'busy' as const },
+  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург', initials: 'МГ', cabinet: 'Кабинет 3', shift: '12:00 – 00:00', status: 'accepting' as const },
 ]
 
 const EQUIPMENT = [
@@ -411,8 +411,8 @@ export default function HomePage() {
               <FadeIn key={doc.name} delay={i * 100}>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/15 transition-all group">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-white/20 shrink-0">
-                      <Image src={doc.photo} alt={doc.name} fill className="object-cover" />
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-white/20 shrink-0 bg-white/10 flex items-center justify-center">
+                      <span className="text-lg font-bold text-white/50">{doc.initials}</span>
                     </div>
                     <div className="min-w-0">
                       <h3 className="text-white font-semibold text-sm truncate">{doc.name}</h3>
@@ -629,9 +629,8 @@ export default function HomePage() {
             {DOCTORS.map((d, i) => (
               <FadeIn key={d.name} delay={i * 100} className="min-w-[260px] snap-start lg:min-w-0">
                 <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 group hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-72 overflow-hidden">
-                    <Image src={d.photo} alt={d.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/60 via-transparent to-transparent" />
+                  <div className="relative h-72 overflow-hidden bg-gradient-to-br from-[#1e3a5f] to-[#2a5280] flex items-center justify-center">
+                    <span className="text-6xl font-bold text-white/20">{d.initials}</span>
                     <div className="absolute bottom-4 left-4 right-4">
                       <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-medium">
                         <Award className="w-3 h-3" /> {d.experience}
