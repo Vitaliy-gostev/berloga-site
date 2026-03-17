@@ -75,10 +75,10 @@ const NAV = [
 ]
 
 const PROMOS = [
-  { title: 'Чек-ап для кошки', desc: 'Комплексное обследование со скидкой 20%', badge: '-20%', color: 'from-emerald-500 to-teal-600', photo: '/photos/DSC_0185.jpg' },
-  { title: 'Вакцинация щенков', desc: 'Первая вакцинация + осмотр бесплатно', badge: 'Акция', color: 'from-blue-500 to-indigo-600', photo: '/photos/DSC_0192.jpg' },
-  { title: 'УЗИ + консультация', desc: 'УЗИ брюшной полости + консультация врача', badge: '-15%', color: 'from-purple-500 to-pink-600', photo: '/photos/DSC_0210.jpg' },
-  { title: 'Стоматология', desc: 'Ультразвуковая чистка зубов со скидкой', badge: '-25%', color: 'from-orange-500 to-red-500', photo: '/photos/DSC_0195.jpg' },
+  { title: 'Чек-ап для кошки', desc: 'Комплексное обследование со скидкой 20%', badge: '-20%', color: 'from-emerald-500 to-teal-600', photo: '/stock/cat_checkup.jpg' },
+  { title: 'Вакцинация щенков', desc: 'Первая вакцинация + осмотр бесплатно', badge: 'Акция', color: 'from-blue-500 to-indigo-600', photo: '/stock/puppy_vaccine.jpg' },
+  { title: 'УЗИ + консультация', desc: 'УЗИ брюшной полости + консультация врача', badge: '-15%', color: 'from-purple-500 to-pink-600', photo: '/stock/ultrasound.jpg' },
+  { title: 'Стоматология', desc: 'Ультразвуковая чистка зубов со скидкой', badge: '-25%', color: 'from-orange-500 to-red-500', photo: '/stock/dental.jpg' },
 ]
 
 const SERVICE_CATEGORIES = [
@@ -90,28 +90,28 @@ const SERVICE_CATEGORIES = [
 ]
 
 const SERVICES = [
-  { title: 'УЗИ', price: 'от 3 200 ₽', nightPrice: 'от 4 500 ₽', desc: 'Ультразвуковая диагностика на аппарате экспертного класса', icon: Activity, photo: '/photos/DSC_0205.jpg', cat: 'diagnostics' },
-  { title: 'Вакцинация', price: 'от 2 800 ₽', nightPrice: 'от 2 800 ₽', desc: 'Комплексная вакцинация кошек и собак по протоколу WSAVA', icon: Syringe, photo: '/photos/DSC_0195.jpg', cat: 'prevention' },
-  { title: 'Стерилизация', price: 'от 5 000 ₽', nightPrice: 'от 7 000 ₽', desc: 'Лапароскопическая стерилизация с газовой анестезией', icon: Scissors, photo: '/photos/DSC_0207.jpg', cat: 'surgery' },
-  { title: 'Терапия', price: 'от 1 800 ₽', nightPrice: 'от 2 500 ₽', desc: 'Приём терапевта, осмотр, назначение лечения', icon: Stethoscope, photo: '/photos/DSC_0185.jpg', cat: 'therapy' },
-  { title: 'Стоматология', price: 'от 3 300 ₽', nightPrice: 'от 4 600 ₽', desc: 'Лечение и удаление зубов, ультразвуковая санация', icon: Star, photo: '/photos/DSC_0192.jpg', cat: 'surgery' },
-  { title: 'Хирургия', price: 'от 2 500 ₽', nightPrice: 'от 3 500 ₽', desc: 'Плановые и экстренные хирургические вмешательства', icon: Zap, photo: '/photos/DSC_0208.jpg', cat: 'surgery' },
-  { title: 'Стационар', price: 'от 2 500 ₽', nightPrice: 'от 2 500 ₽', desc: 'Круглосуточное наблюдение и интенсивная терапия', icon: BedDouble, photo: '/photos/DSC_0198.jpg', cat: 'therapy' },
-  { title: 'Лабораторная диагностика', price: 'от 1 500 ₽', nightPrice: 'от 2 000 ₽', desc: 'Анализы крови, мочи — результаты за 30 минут', icon: Microscope, photo: '/photos/DSC_0200.jpg', cat: 'diagnostics' },
+  { title: 'УЗИ', price: 'от 3 200 ₽', nightPrice: 'от 4 500 ₽', desc: 'Ультразвуковая диагностика на аппарате экспертного класса', icon: Activity, photo: '/stock/ultrasound.jpg', cat: 'diagnostics' },
+  { title: 'Вакцинация', price: 'от 2 800 ₽', nightPrice: 'от 2 800 ₽', desc: 'Комплексная вакцинация кошек и собак по протоколу WSAVA', icon: Syringe, photo: '/stock/puppy_vaccine.jpg', cat: 'prevention' },
+  { title: 'Стерилизация', price: 'от 5 000 ₽', nightPrice: 'от 7 000 ₽', desc: 'Лапароскопическая стерилизация с газовой анестезией', icon: Scissors, photo: '/stock/surgery.jpg', cat: 'surgery' },
+  { title: 'Терапия', price: 'от 1 800 ₽', nightPrice: 'от 2 500 ₽', desc: 'Приём терапевта, осмотр, назначение лечения', icon: Stethoscope, photo: '/stock/vet_exam.jpg', cat: 'therapy' },
+  { title: 'Стоматология', price: 'от 3 300 ₽', nightPrice: 'от 4 600 ₽', desc: 'Лечение и удаление зубов, ультразвуковая санация', icon: Star, photo: '/stock/dental.jpg', cat: 'surgery' },
+  { title: 'Хирургия', price: 'от 2 500 ₽', nightPrice: 'от 3 500 ₽', desc: 'Плановые и экстренные хирургические вмешательства', icon: Zap, photo: '/stock/operating.jpg', cat: 'surgery' },
+  { title: 'Стационар', price: 'от 2 500 ₽', nightPrice: 'от 2 500 ₽', desc: 'Круглосуточное наблюдение и интенсивная терапия', icon: BedDouble, photo: '/stock/hospital.jpg', cat: 'therapy' },
+  { title: 'Лабораторная диагностика', price: 'от 1 500 ₽', nightPrice: 'от 2 000 ₽', desc: 'Анализы крови, мочи — результаты за 30 минут', icon: Microscope, photo: '/stock/lab.jpg', cat: 'diagnostics' },
 ]
 
 const DOCTORS = [
-  { name: 'Медведева Александра Владимировна', specialty: 'Генеральный директор, УЗИ-диагностика', experience: '12 лет опыта', photo: '/photos/DSC_0210.jpg' },
-  { name: 'Шилина Мария Александровна', specialty: 'Главный врач, нефролог, уролог', experience: '10 лет опыта', photo: '/photos/DSC_0225.jpg' },
-  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург-стоматолог, абдоминальный хирург', experience: '9 лет опыта', photo: '/photos/DSC_0190.jpg' },
-  { name: 'Черныш Мария Сергеевна', specialty: 'Зав. терапевтическим отделением', experience: '8 лет опыта', photo: '/photos/DSC_0220.jpg' },
+  { name: 'Медведева Александра Владимировна', specialty: 'Генеральный директор, УЗИ-диагностика', experience: '12 лет опыта', photo: '/stock/doctor1.jpg' },
+  { name: 'Шилина Мария Александровна', specialty: 'Главный врач, нефролог, уролог', experience: '10 лет опыта', photo: '/stock/doctor2.jpg' },
+  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург-стоматолог, абдоминальный хирург', experience: '9 лет опыта', photo: '/stock/doctor3.jpg' },
+  { name: 'Черныш Мария Сергеевна', specialty: 'Зав. терапевтическим отделением', experience: '8 лет опыта', photo: '/stock/doctor4.jpg' },
 ]
 
 const DOCTORS_ON_SHIFT = [
-  { name: 'Шилина Мария Александровна', specialty: 'Нефролог, уролог', photo: '/photos/DSC_0225.jpg', cabinet: 'Кабинет 1', shift: '09:00 – 21:00', status: 'accepting' as const },
-  { name: 'Медведева Александра Владимировна', specialty: 'УЗИ-диагностика', photo: '/photos/DSC_0210.jpg', cabinet: 'Кабинет УЗИ', shift: '10:00 – 22:00', status: 'accepting' as const },
-  { name: 'Черныш Мария Сергеевна', specialty: 'Терапевт', photo: '/photos/DSC_0220.jpg', cabinet: 'Процедурный', shift: '08:00 – 20:00', status: 'busy' as const },
-  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург', photo: '/photos/DSC_0190.jpg', cabinet: 'Кабинет 3', shift: '12:00 – 00:00', status: 'accepting' as const },
+  { name: 'Шилина Мария Александровна', specialty: 'Нефролог, уролог', photo: '/stock/doctor2.jpg', cabinet: 'Кабинет 1', shift: '09:00 – 21:00', status: 'accepting' as const },
+  { name: 'Медведева Александра Владимировна', specialty: 'УЗИ-диагностика', photo: '/stock/doctor1.jpg', cabinet: 'Кабинет УЗИ', shift: '10:00 – 22:00', status: 'accepting' as const },
+  { name: 'Черныш Мария Сергеевна', specialty: 'Терапевт', photo: '/stock/doctor4.jpg', cabinet: 'Процедурный', shift: '08:00 – 20:00', status: 'busy' as const },
+  { name: 'Минасян Гайк Эдуардович', specialty: 'Хирург', photo: '/stock/doctor3.jpg', cabinet: 'Кабинет 3', shift: '12:00 – 00:00', status: 'accepting' as const },
 ]
 
 const EQUIPMENT = [
@@ -121,7 +121,7 @@ const EQUIPMENT = [
     title: 'УЗИ экспертного класса',
     desc: 'Аппарат Mindray DC-80 с конвексным и линейным датчиками. Позволяет проводить полное абдоминальное УЗИ, ЭхоКГ, а также УЗИ мелких органов с высочайшей детализацией.',
     features: ['Исследование в реальном времени', '3D/4D визуализация', 'Допплер сосудов', 'Запись видео'],
-    photo: '/photos/DSC_0205.jpg',
+    photo: '/stock/ultrasound.jpg',
   },
   {
     key: 'xray',
@@ -129,7 +129,7 @@ const EQUIPMENT = [
     title: 'Цифровой рентген',
     desc: 'Цифровая рентгенографическая система с минимальной лучевой нагрузкой. Результат — через 30 секунд на экране. Возможность отправки снимков коллегам для консультации.',
     features: ['Минимальная доза облучения', 'Мгновенный результат', 'Высокое разрешение', 'Телеконсультации'],
-    photo: '/photos/DSC_0224.jpg',
+    photo: '/stock/xray.jpg',
   },
   {
     key: 'lab',
@@ -137,7 +137,7 @@ const EQUIPMENT = [
     title: 'Собственная лаборатория',
     desc: 'Автоматический гематологический и биохимический анализаторы. Результаты ОАК за 3 минуты, биохимии — за 15 минут. Не нужно ждать — всё на месте.',
     features: ['ОАК за 3 минуты', 'Биохимия за 15 минут', 'Микроскопия', 'Коагулограмма'],
-    photo: '/photos/DSC_0200.jpg',
+    photo: '/stock/lab.jpg',
   },
   {
     key: 'surgery',
@@ -145,7 +145,7 @@ const EQUIPMENT = [
     title: 'Современная операционная',
     desc: 'Оборудована газовым наркозным аппаратом, мониторами витальных функций и электрохирургическим блоком. Лапароскопические операции — минимум травматизации.',
     features: ['Газовая анестезия', 'Мониторинг пульсоксиметрии', 'Электрокоагуляция', 'Лапароскопия'],
-    photo: '/photos/DSC_0208.jpg',
+    photo: '/stock/operating.jpg',
   },
 ]
 
@@ -159,8 +159,8 @@ const REVIEWS = [
 ]
 
 const GALLERY_PHOTOS = [
-  '/photos/DSC_0230.jpg', '/photos/DSC_0231.jpg', '/photos/DSC_0185.jpg', '/photos/DSC_0205.jpg',
-  '/photos/DSC_0210.jpg', '/photos/DSC_0220.jpg', '/photos/DSC_0195.jpg', '/photos/DSC_0234.jpg',
+  '/stock/clinic1.jpg', '/stock/clinic2.jpg', '/stock/cat_vet.jpg', '/stock/vet_exam.jpg',
+  '/stock/dog_happy.jpg', '/stock/stethoscope.jpg', '/stock/clinic3.jpg', '/stock/clinic4.jpg',
 ]
 
 const PRICES: { category: string; items: { name: string; day: string; night: string }[] }[] = [
@@ -323,7 +323,7 @@ export default function HomePage() {
 
       {/* ====== HERO ====== */}
       <section className="relative h-screen min-h-[650px] flex items-center justify-center overflow-hidden">
-        <Image src="/photos/DSC_0210.jpg" alt="Ветеринарная клиника Берлога" fill className="object-cover" priority quality={85} />
+        <Image src="/stock/clinic1.jpg" alt="Ветеринарная клиника Берлога" fill className="object-cover" priority quality={85} />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/70 via-[#1e3a5f]/40 to-[#0f1f33]/90" />
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -658,7 +658,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <FadeIn>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
-                <Image src="/photos/DSC_0230.jpg" alt="Клиника Берлога" fill className="object-cover" />
+                <Image src="/stock/clinic2.jpg" alt="Клиника Берлога" fill className="object-cover" />
                 <div className="absolute bottom-4 left-4 right-4 bg-white/20 backdrop-blur-md rounded-2xl px-5 py-3 border border-white/30">
                   <p className="text-white text-sm font-medium text-center">Просторная ресепшн-зона с зоной комфорта для питомцев</p>
                 </div>
